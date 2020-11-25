@@ -13,7 +13,7 @@ public class Car : MonoBehaviour
     private Quaternion currRot;
     Vector3 vehicleMove;
     private float timer = 100f;
-
+    Aspect aspect;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +48,10 @@ public class Car : MonoBehaviour
             }
         }
 
+        if(aspect.aspectType == Aspect.AspectTypes.LIGHT)
+        {
+            speed = 0;
+        }
     }
 
     // Triggers
